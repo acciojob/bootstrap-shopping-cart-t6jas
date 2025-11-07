@@ -1,16 +1,167 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shopping Cart Layout</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>
+        .block-heading, .summary h2 {
+            color: #3b99e0;
+        }
 
+        .summary {
+            background-color: #f7fbff; /* Background color: #f7fbff */
+            border-top: 3px solid #5ea4f3; /* Border-top: #5ea4f3 */
+            padding: 20px;
+        }
+        
+        /* Product Block Styling */
+        .product {
+            margin-bottom: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #dee2e6; /* Simple separator */
+        }
+        
+        .product:last-child {
+            border-bottom: none;
+        }
+
+        .summary-item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .btn-checkout {
+            width: 100%;
+            border-radius: 0;
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+<div class="container my-5">
+    
+    <div class="block-heading text-center mb-5">
+        <h1 class="display-4">Shopping cart</h1>
+        <p class="lead text-muted">The customer is very important, the customer will be followed by the customer. Now, as an urn, I have no right to be in possession of property.</p>
+    </div>
+
+    <div class="row">
+        
+        <div class="col-lg-8">
+            
+            <div class="product">
+                <div class="row align-items-center">
+                    
+                    <div class="col-3">
+                        <img src="placeholder_phone.jpg" alt="Product Image" class="img-fluid">
+                    </div>
+
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="text-primary">I am very sorry</h5>
+                                <p class="text-muted small mb-1">Display: 5 inches</p>
+                                <p class="text-muted small mb-1">RAM: 4GB</p>
+                                <p class="text-muted small mb-0">Memory: 32GB</p>
+                            </div>
+
+                            <div class="col-md-4 text-right">
+                                <label for="qty1" class="small text-muted mb-0">Quantity:</label>
+                                <input type="number" id="qty1" class="form-control form-control-sm d-inline-block text-center" style="width: 60px;" value="0">
+                                <p class="mt-2 h5">$120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="placeholder_phone.jpg" alt="Product Image" class="img-fluid">
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="text-primary">I am very sorry</h5>
+                                <p class="text-muted small mb-1">Display: 5 inches</p>
+                                <p class="text-muted small mb-1">RAM: 4GB</p>
+                                <p class="text-muted small mb-0">Memory: 32GB</p>
+                            </div>
+                            <div class="col-md-4 text-right">
+                                <label for="qty2" class="small text-muted mb-0">Quantity:</label>
+                                <input type="number" id="qty2" class="form-control form-control-sm d-inline-block text-center" style="width: 60px;" value="1">
+                                <p class="mt-2 h5">$120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="placeholder_phone.jpg" alt="Product Image" class="img-fluid">
+                    </div>
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="text-primary">I am very sorry</h5>
+                                <p class="text-muted small mb-1">Display: 5 inches</p>
+                                <p class="text-muted small mb-1">RAM: 4GB</p>
+                                <p class="text-muted small mb-0">Memory: 32GB</p>
+                            </div>
+                            <div class="col-md-4 text-right">
+                                <label for="qty3" class="small text-muted mb-0">Quantity:</label>
+                                <input type="number" id="qty3" class="form-control form-control-sm d-inline-block text-center" style="width: 60px;" value="1">
+                                <p class="mt-2 h5">$120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-4">
+            <div class="summary">
+                <h2 class="mb-4">Summary</h2>
+                
+                <div class="d-flex justify-content-between summary-item">
+                    <span class="text-muted">Subtotal</span>
+                    <span>$360</span>
+                </div>
+                
+                <div class="d-flex justify-content-between summary-item">
+                    <span class="text-muted">Discount</span>
+                    <span>$0</span>
+                </div>
+
+                <div class="d-flex justify-content-between summary-item">
+                    <span class="text-muted">Shipping</span>
+                    <span>$0</span>
+                </div>
+
+                <div class="d-flex justify-content-between summary-item border-bottom-0 pt-3">
+                    <span class="font-weight-bold">Total</span>
+                    <span class="font-weight-bold">$360</span>
+                </div>
+
+                <button class="btn btn-primary btn-checkout mt-4" type="button">checkout</button>
+            </div>
+        </div>
+        </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
